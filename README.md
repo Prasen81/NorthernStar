@@ -30,6 +30,8 @@ purposes.
 * To Preserve the the Notes , it is suggested to use GCP Storgae Class- Archieve as this the lowest cost of storage service and suitable for scenarios where the storage access is very less frequent and minimum time to live is 365 days , so that means we need to additionally has to force the duration remains minimum 3 years.  It also has no guarntee on response on retrieval time SLA . Assumption is these Notes don't need to be retrived within any SLA , however we can provide some guidelines how soon they may be retrieved when needed.
 * The Reliability and Availiability of the application will be achieved by hosting the application in a multi zone within a Region.
 * The solution will be based on Infrastructure as Code , so that will be possible to host any other region as per GCP if needed. So if the whole region breaks down it would take less time and would be easier to host on different region of choice with IaC.
-* 
+* We would need a CI/CD solution with an aumtomated deployment and configuration management so that developers can deploy multiple chanegs to teh application without having any downtime.There are other relevant points along with this to consider further:
+   - 
+* To have monitoring enabled , we would enable GCP Monitoring service , Also we would need Logging service which can provide details on traffic usage , security details , infrastructure metrics . We can also put some alterting on top of that. Its possible to use 3rd Party Monitoring services integrated with the application as Prometheus and using Grafana as dashboard.
 
 
