@@ -27,4 +27,9 @@ purposes.
 * Google Cloud will be the chosen public cloud provider where the Notejam application will be hosted.
 * To meet the Business Requirements the following needed to be feature of the new cloud infrastructure>
      - To server the variable amount of traffic , we would need Autoscaling Policy , it will help to reduce the cost of having reserved more compute resources than the application need at any given point of time . That means it will reduce the cost. Also with Autoscaling policy and the desired calue of Threshold set; there wont be any disruption of service.
+* To Preserve the the Notes , it is suggested to use GCP Storgae Class- Archieve as this the lowest cost of storage service and suitable for scenarios where the storage access is very less frequent and minimum time to live is 365 days , so that means we need to additionally has to force the duration remains minimum 3 years.  It also has no guarntee on response on retrieval time SLA . Assumption is these Notes don't need to be retrived within any SLA , however we can provide some guidelines how soon they may be retrieved when needed.
+* The Reliability and Availiability of the application will be achieved by hosting the application in a multi zone within a Region.
+* The solution will be based on Infrastructure as Code , so that will be possible to host any other region as per GCP if needed. So if the whole region breaks down it would take less time and would be easier to host on different region of choice with IaC.
 * 
+
+
