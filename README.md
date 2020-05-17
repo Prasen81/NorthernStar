@@ -37,6 +37,10 @@ purposes.
 * It also makes sense to have a seperate capacity based infrastructure planned for different enviornments like Dev, Test and Production. Infrastructure as Code should then be based on which environment we are building the infrastructure. Like the Compute instances wont need ta the capacity as we expect in production , also the Notes we dont need to store in Dev environments.
 * To have monitoring enabled , we would enable GCP Monitoring service , Also we would need Logging service which can provide details on traffic usage , security details , infrastructure metrics . We can also put some alterting on top of that. Its possible to use 3rd Party Monitoring services integrated with the application as Prometheus and using Grafana as dashboard.
 
+# Hosted Cloud Solution (GCP)
+
+https://app.lucidchart.com/invitations/accept/0962f353-abe5-4c4d-be94-39e29dee8066
+
 # ToolStack:
 1. GCP as the Public Cloud platform
 2. GIT as SCM
