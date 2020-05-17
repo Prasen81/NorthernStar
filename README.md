@@ -46,3 +46,12 @@ https://app.lucidchart.com/invitations/accept/0962f353-abe5-4c4d-be94-39e29dee80
 2. GIT as SCM
 3. Terraform as IaC solution
 4. Ansible as Configuration Management.
+
+# Process :
+Terraform will build the infrastructure on GCP with following file structure:
+There will be seperate tfvars file for each Dev/Test/Production
+where as main.tf and variables.tf will build the infrastructure.
+if the application needs to be migrated to another region , then we would need to change the corresponsing variables in tfvars file only , assuming most of other variables value will be independent of the region.
+
+Ansible will need a playbook which will configure the env to deploy the notejam application. It will be invoked from the main.tf file.
+
